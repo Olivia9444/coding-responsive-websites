@@ -28,7 +28,7 @@ h1 {
 
 h2 {
   width: 100%;
-  margin: 0;
+  margin: 10;
   font-size: 1.25rem;
   color: #295981;
 }
@@ -51,7 +51,7 @@ header .donate-link {
   background: #a40b28;
   padding: 10px 30px;
   color: white;
-  /* add align-self; flex-end; to overwrite align-items: center; from the parent container */
+  align-self: flex-end;
   border-radius: 15px;
   align-self: flex-end;
 }
@@ -98,6 +98,7 @@ main .content-wrapper {
   justify-content: center;
   flex-flow: row wrap;
   padding: 50px 0;
+  flex-grow: 1;
 }
 
 .main-content-wrapper {
@@ -151,12 +152,13 @@ aside {
   justify-content: center;
   background-color: #f0f8ff;
   padding: 50px 0;
+  flex: 0 0 300px;
 }
 
 .aside-content-wrapper {
   display: flex;
   flex-flow: row wrap;
-  align-content: flex-start;
+  align-content: aside;
   width: 80%;
 }
 
@@ -213,16 +215,20 @@ footer img {
   .main-content-wrapper {
     /* Add flex-grow: 1; so that the main-content-wrapper fills up any extra space in the parent container. */
     width: 55%;
+    flex-grow: 1;
   }
 
   aside {
     width: 300px;
+    flex; 0 0 300px;
+    align-self; flex-start;
     /* Add flex: 0 0 300px; so that the sidebar doesn't shrink below the optimum width of 300px. */
     /* Add align-self: flex-start; to overwrite the default align-items' value of stretch. */
   }
 
   footer img {
     width: 25%;
+    object-fit: cover;
   }
 
 }
@@ -231,15 +237,18 @@ footer img {
   .about {
     display: flex;
     align-items: center;
+    order: 1;
   }
 
   .about-text {
     width: 50%;
+    order: 2;
     /* Change the placement of the text by adding order: 1; */
   }
 
   .about-image {
     width: 50%;
+    order: 2; 
     /* Change the placement of the image by adding order: 2; */
   }
 
@@ -263,6 +272,7 @@ footer img {
   }
 
   .program p {
+    flex-grow: 1;
     /* Add flex-grow: 1; so that the extra space within the card is below the paragraph instead of below the link. */
   }
 }
