@@ -67,20 +67,20 @@ header h1 span {
 }
 
 header nav {
-	float: right;
-	padding: 46px 0;
+	padding: 20px 0;
 }
 
 header nav ul {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 header nav ul li {
-	font-size: 1.14em;
+	font-size: .875rem;
 	font-weight: 700;
 	text-transform: uppercase;
-	padding: 0 1.6em;
+	padding: 10px 0;
 	width: 100%;
 }
 
@@ -149,14 +149,15 @@ header nav ul li a {
 
 .menu-list li {
 	color: #45610E;
-	font-size: 1em;
-	line-height: 0.44em;
+	font-size: 36px;
+	line-height: 1rem;
 }
 
 /******** FOOTER STYLES ********/
 /* The widths are in a percentage! */
 footer {
-	text-align: center;
+	margin-top 8px;
+	display: flex
 	margin-top: 8px;
 }
 
@@ -164,5 +165,5 @@ footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #45610E;
-	font-size: 14px;
+	font-size: .875rem;
 }
